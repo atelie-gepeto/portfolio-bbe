@@ -51,6 +51,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,.track:focus-visible,
 /* capa em foto de sangria total, com degrade azul de baixo para cima (como a home) */
 .hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:min(78vh,720px);overflow:hidden;background:var(--blue)}
 .herobg{position:absolute;inset:0;background-position:center 35%}
+.herovid{display:block;position:relative;width:100%;aspect-ratio:16/9;max-height:70vh;object-fit:cover;object-position:center 55%;background:var(--blue)}
+.hero:has(.herovid){justify-content:flex-start;min-height:0}
+.hero:has(.herovid) .herotxt{margin-top:0;padding-top:40px;background:#304A96}
 .herotxt{position:relative;margin-top:clamp(180px,30vw,340px);padding:120px 0 40px;color:var(--white);
   background:linear-gradient(to bottom,rgba(48,74,150,0) 0,rgba(48,74,150,.93) 110px,#304A96 190px)}
 .kicker{margin:0 0 8px;font:700 14px/1.4 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--cream)}
@@ -366,7 +369,7 @@ pre.pre{white-space:pre-wrap;font:400 16px/1.6 var(--sans);background:var(--crea
 .flinks a{font:700 16px/1.4 var(--sans);color:var(--blue);text-decoration:none;padding:4px 0}
 .flinks a:hover{text-decoration:underline}
 @media (max-width:640px){.nav .logo{width:132px}.nav nav{gap:0 16px;flex-wrap:nowrap}.hm{display:none}.nav nav a{font-size:17px}.band{padding:48px 0}.tgrid{grid-template-columns:1fr}.tmedia{aspect-ratio:16/10}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.tcard:hover,.ccard:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){.herovid{display:none}.hero:has(.herovid)::before{content:"";display:block;aspect-ratio:16/9;max-height:70vh;background:url(media/lago-poster.jpg) center 55%/cover no-repeat}html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.tcard:hover,.ccard:hover{transform:none}}
 
 /* aves em voo na capa e divisores do site (graficos decorativos) */
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;aspect-ratio:9/1;max-height:170px;background:var(--ph-birds) center bottom/100% 100% no-repeat;pointer-events:none}
@@ -421,12 +424,12 @@ pre.pre{white-space:pre-wrap;font:400 16px/1.6 var(--sans);background:var(--crea
 </header>
 <main id="main">
 <section class="hero" id="top">
-  <div class="phi ph-forest herobg" role="img" aria-label="Forested mountain slopes under a partly cloudy blue sky."></div>
+  <video class="herovid" autoplay muted loop playsinline preload="metadata" poster="media/lago-poster.jpg" aria-label="Silent looping video of a lake edged by Atlantic Forest, with dogs on the grass at the shore, birds over the water, and the camera moving closer."><source src="media/lago.mp4" type="video/mp4"></video>
   <div class="herotxt"><div class="wrap">
     <p class="kicker">Work samples &middot; shared by link</p>
     <h1>Communication and marketing portfolio, built from BBE&rsquo;s public content</h1>
     <p class="lead">A portfolio of work samples for the Communication and Marketing Analyst role at Brazil Birding Experts. Every piece starts from BBE&rsquo;s public content (website, blog and YouTube channel), plus the public Instagram, Facebook and YouTube counts read on 20 Nov 2026 that appear only in the dashboard, and is marked as a draft. Nothing here has been published, sent or scheduled.</p>
-    <p class="lead small">Logo and photos: Brazil Birding Experts, credited; used here only for this application, shared by link and not indexed. They come from BBE&rsquo;s website and YouTube, reduced in size, with the credit next to each image. No image was generated. Prepared by André Dib de Seixas &middot; atelie@gepeto.life.</p>
+    <p class="lead small">Logo and photos: Brazil Birding Experts, credited; used here only for this application, shared by link and not indexed. They come from BBE&rsquo;s website and YouTube, reduced in size, with the credit next to each image. Opening video: the lake in front of André&rsquo;s house in the Serra do Mar, filmed by him. No image was generated. Prepared by André Dib de Seixas &middot; atelie@gepeto.life.</p>
     <p class="lead small">Photo: BBE / brazilbirdingexperts.com (image from the BBE website; author not stated there). Decorative birds and wave dividers: graphics from the BBE website.</p>
     <p class="cta"><a class="pill solid" href="#contents">See the contents</a><a class="pill ghost" href="#calendar">Open the calendar</a></p>
   </div></div>
