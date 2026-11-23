@@ -372,7 +372,7 @@ pre.pre{white-space:pre-wrap;font:400 16px/1.6 var(--sans);background:var(--crea
 @media (prefers-reduced-motion:reduce){.herovid{display:none}.hero:has(.herovid)::before{content:"";display:block;aspect-ratio:16/9;max-height:70vh;background:url(media/lago-poster.jpg) center 55%/cover no-repeat}html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.tcard:hover,.ccard:hover{transform:none}}
 
 /* aves em voo na capa e divisores do site (graficos decorativos) */
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;aspect-ratio:9/1;max-height:170px;background:var(--ph-birds) center bottom/100% 100% no-repeat;pointer-events:none}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:min(calc(100vw/9),170px);background:var(--ph-birds) center bottom/100% 100% no-repeat;pointer-events:none}
 .herotxt{padding-bottom:clamp(60px,11vw,170px)}
 #contents::before{display:none}
 .b-white{position:relative}
